@@ -1,0 +1,75 @@
+<h1>Provider Search Results</h1>
+
+<p>
+  This component displays the results of a provider search API call
+</p>
+<br />
+
+<form #postalCodeSearch="ngForm" (ngSubmit)="onSubmit(postalCode.value)">
+    <mat-form-field class="example-quarter-width">
+      <input matInput #postalCode ng-model="postalCode" placeholder="Postal Code" required ng-pattern="/^[0-9]{5}$/" md-maxlength="5">
+      <mat-hint align="end">{{postalCode.value.length}} / 5</mat-hint>
+    </mat-form-field>
+    <br />
+    <br />
+    <button mat-button type="submit">Find Provider</button>
+</form>
+
+<br />
+<br />
+
+<p *ngIf="!locationData">
+<!-- Location search results for postal code: {{locationData.zip_code}} -->
+</p>
+
+<table class='table' *ngIf="locationData">
+  <thead>
+    <tr>
+      <th>Lat</th>
+      <th>Lon</th>
+      <th>City</th>
+      <th>State</th>
+      <th>Time Zone</th>
+      <th>Alternate City Names</th>
+    </tr>
+  </thead>
+  <tr valign='top'>
+    <td>{{locationData.lat}}</td>
+    <td>{{locationData.lng}}</td>
+    <td>{{locationData.city}}</td>
+    <td>{{locationData.state}}</td>
+    <td>{{locationData.timezone.timezone_identifier}}</td>
+    <table>
+      <tr *ngFor="let name of locationData.acceptable_city_names" valign='top'>
+        <td>{{name.city}}, {{name.state}}</td>
+      </tr>
+    </table>
+  </tr>
+</table>
+
+<br />
+
+<p *ngIf="!providerResults">
+  <em>Loading...</em>
+</p>
+<table class='table' *ngIf="providerResults">
+  <thead>
+    <tr>
+      <th>Name</th>
+      <th>City</th>
+    </tr>
+  </thead>
+  <tr *ngFor="let item of providerResults.data">
+    <td valign="top">{{item.profile.first_name}}&nbsp;{{item.profile.last_name}}</td>
+
+    <td>
+        <table>
+          <tr *ngFor="let address of item.practices">
+            <td valign="top">
+              {{address.visit_address.city}}, {{address.visit_address.state}}  
+            </td>
+          </tr>
+        </table>
+    </td>
+  </tr>
+</table>
