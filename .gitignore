@@ -7,7 +7,7 @@
 
 # dependencies
 # included to get dependencies
-# /node_modules
+/node_modules
 
 # IDEs and editors
 /.idea
@@ -33,6 +33,7 @@
 npm-debug.log
 testem.log
 /typings
+/src/app/myKeys.ts
 
 # e2e
 /e2e/*.js

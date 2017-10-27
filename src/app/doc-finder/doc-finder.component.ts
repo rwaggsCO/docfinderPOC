@@ -65,27 +65,3 @@ export class DocFinderComponent {
       '10');
   }
 }
-
-/*
-lat : string,
-long : string,
-skip : string,
-limit: string
-)
-
-var resource_url = 'https://api.betterdoctor.com/2016-03-01/doctors?location=37.773,-122.413,100&skip=2&limit=10&user_key=' + api_key;
-
-Target zip code
-55440-1459
-
-user_key=6fcb8dde8af5bf38e0508f66046a35f8
-
-Lat Long
-(44.980000, -93.26)
-
-44.980000, -93.26,50
-
-CORS resolution
-add to end of chrome target --disable-web-security --user-data-dir
-
-*/

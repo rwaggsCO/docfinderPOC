@@ -30,13 +30,13 @@ import { CONST_ROUTING } from './app.routing';
     MatButtonModule,
     MatCheckboxModule,
     MatMenuModule,
-    CONST_ROUTING
+    CONST_ROUTING`
   ],
   providers: [
     { provide: 'DOCFINDER_URL', useValue: 'https://api.betterdoctor.com' },
-    { provide: 'DOCFINDER_USER_KEY', useValue: '6fcb8dde8af5bf38e0508f66046a35f8' },
+    { provide: 'DOCFINDER_USER_KEY', useValue: 'place your key here' },
     { provide: 'ZIP_OPS_URL', useValue: 'https://www.zipcodeapi.com/rest' },
-    { provide: 'ZIP_OPS_API_KEY', useValue: 'eGo96oEkc5UkxMPgTg0y6Id2LDA8KztWQKQnqAFvMx14drfcXl3CIfQNFVS2K2oE' },
+    { provide: 'ZIP_OPS_API_KEY', useValue: 'place your key here' },
     [DocFinderService],
     [ZipToLocationService]
 

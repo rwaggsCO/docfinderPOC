@@ -35,6 +35,3 @@ export class ZipToLocationService {
       console.log(error);
   }
 }
-
-// https://www.zipcodeapi.com/rest/<api_key>/info.<format>/<zip_code>/<units>.
-// Application key: eGo96oEkc5UkxMPgTg0y6Id2LDA8KztWQKQnqAFvMx14drfcXl3CIfQNFVS2K2oE
