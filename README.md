@@ -1,4 +1,12 @@
 # DocFinderPOC
+## Overview
+This is a proof of concept project that demonstrates using Angular and external services to locate a provider by zip code. It was developed using common and open source tools, primarily:
+* [Angular/CLI](https://cli.angular.io/)
+* Angular/CLI scaffolding
+* Atom
+* Intrinsic dev tools of your favorite web browser
+
+## Setup
 This project use Angular Material components. Information about material can be found here: https://material.angular.io/
 
 Once this project has been downloaded from Github, from an angular-cli command window:
