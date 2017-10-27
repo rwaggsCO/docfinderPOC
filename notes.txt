@@ -1,0 +1,18 @@
+Links:
+	Angular Materiall:
+		General:
+			https://material.angular.io/
+		Setup:
+			https://material.angular.io/guide/getting-started
+		
+After npm install:
+
+c:\Development\docFinderPOC>npm install --save @angular/material @angular/cdk
+
+	npm install --save @angular/material
+		**** Does not work ??? ***** do manual download from: https://github.com/angular/material2
+			- download zip file	
+	
+	npm install --save @angular/cdk
+		**** Does not work ??? ***** do manual download from: https://github.com/angar/ 
+			- download zip file		
